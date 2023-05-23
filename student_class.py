@@ -12,10 +12,6 @@ class Student():
         print("Student name is '{}' with age '{}' got grade '{}'".format(self.Stuname, self.Stuage,self.StuGrade))
 
 
-# # Driver code
-# stu = Student("Satyam", 16, "B")
-# stu.Display()
-
 
 class School(Student):
 

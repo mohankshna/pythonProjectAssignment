@@ -11,9 +11,7 @@ def browser():
 
 def test_w3schools_logo(browser):
 
-    #driver = webdriver.Chrome(executable_path=".//chromedriver.exe")
     browser.get("https://www.w3schools.com/")
-    time.sleep(2)
     try:
         browser.maximize_window()
         print(browser.title)
