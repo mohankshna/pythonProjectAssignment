@@ -9,7 +9,7 @@ act = ActionChains(driver)
 try:
     driver.maximize_window()
     act_title=driver.title
-    print(len(act_title))
+    print(act_title)
     driver.implicitly_wait(10)
 
     # ASSERT WE ARE ON THE CORRECT PAGE
@@ -22,21 +22,19 @@ try:
         print("MakemyTrip logo displayed")
     else:
         raise Exception("MakemyTrip logo not displayed")
-    depart = 'Pune'
-    arrive = 'Bangalore'
-    departure_date = 'Fri Dec 10 2021'
-    secure = 'y'
-    covid = 'y'
+
+    source = 'Pune'
+    destination = 'Bangalore'
 
     #Selecting Oneway from Hyd to Tirupathi on Apr 25 2023
     ONE_WAY=driver.find_element_by_xpath("//li[@data-cy='oneWayTrip']")
     time.sleep(2)
     if ONE_WAY.is_enabled():
-     source = driver.find_element_by_xpath("//input[@id='fromCity']").send_keys(depart)
+     source = driver.find_element_by_xpath("//input[@id='fromCity']").send_keys(source)
      time.sleep(2)
      act.send_keys(Keys.DOWN, Keys.ENTER).perform()
      time.sleep(2)
-     destination=driver.find_element_by_xpath("//input[@id='toCity']").send_keys(arrive)
+     destination=driver.find_element_by_xpath("//input[@id='toCity']").send_keys(destination)
      time.sleep(2)
      act.send_keys(Keys.DOWN, Keys.ENTER).perform()
      time.sleep(2)
