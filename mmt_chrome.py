@@ -44,7 +44,6 @@ try:
      search=driver.find_element_by_xpath("//a[contains(text(),'Search')]").click()
      time.sleep(2)
      title=driver.title
-     print(len(title))
 
      if len(title) < len(act_title):
          print("Different Flights page displayed")
